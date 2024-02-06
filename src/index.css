@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #272728;
+  color: #d2d2d2;
+}
+
+.fl {
+  display: flex;
+  align-items: center;
+}
+.fleb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tr {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+
+.scrollbar-thin::-webkit-scrollbar {
+  display: block !important;
+  width: 5px !important;
+  height: 8px !important;
+}
+
+.custom-quill-editor {
+  border-radius: 8px;
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.custom-quill-editor .ql-editor {
+  border-radius: 0 0 8px 8px;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 10px;
+  min-height: 180px;
+}
+
+.custom-quill-editor .ql-container.ql-snow {
+  border: none;
+}
+
+.custom-quill-editor .ql-toolbar {
+  border-radius: 8px 8px 0 0;
+  border: none;
+  background-color: #e2e2e2;
+  display: flex;
+  gap: 16px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0px !important;
+  left: 50%;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: transparent !important; /* Make the inactive bullet transparent */
+  border: 2px solid #f33838 !important; /* Add white border to inactive bullet */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f33838 !important; /* Change active bullet color to red */
+  border: 2px solid #f33838 !important; /* Add red border to active bullet */
+}
