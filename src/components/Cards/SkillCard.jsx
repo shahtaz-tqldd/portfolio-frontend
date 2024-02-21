@@ -12,21 +12,22 @@ const SkillCard = ({ sets, index }) => {
         {index === 0 && <HiOutlineCode />}
         {index === 1 && <FaServer />}
         {index === 2 && <MdSettingsSuggest />}
-        {index === 3 && <BsServer />}
         {setsName}
       </h2>
-      <div className="skills">
+      <div className="flex flex-wrap gap-8">
         {skillSet?.map(({ icon, name }, index) => (
           <div
             key={index}
-            className="flex flex-col items-center hover:text-primary"
+            className="fl flex-col group"
             data-aos="fade-up"
             data-aos-delay={`${(index % 6) * 100 + 100}`}
           >
-            <div className="h-36 w-24 flex items-center justify-center rounded-3xl glow">
-              <img src={icon} alt="icon" className="h-14 w-14 object-contain" />
-            </div>
-            <h1 className="text-center mt-4">{name}</h1>
+            <img
+              src={icon}
+              alt="icon"
+              className="h-[70px] w-[70px] bg-slate-800 p-4 rounded-lg object-contain group-hover:bg-slate-700 tr"
+            />
+            <h3 className="font-semibold mt-3 group-hover:text-primary tr">{name}</h3>
           </div>
         ))}
       </div>

@@ -26,28 +26,9 @@ module.exports = {
       colors: {
         primary: "#03C988",
         sec: "#f6d860",
-        accent: "#bbb",
+        accent: "#2B2A4C",
         neutral: "#fff",
         "base-100": "#1f1f1f",
-      },
-      keyframes: {
-        leftRight: {
-          "0%, 100%": { transform: "translateX(-10%)" },
-          "50%": { transform: "translateX(0)" },
-        },
-        upDown: {
-          "0%, 100%": { transform: "translateY(-10%)" },
-          "50%": { transform: "translateX(0)" },
-        },
-        zoomInOut: {
-          "0%, 100%": { transform: "scale(0.8)" },
-          "50%": { transform: "scale(1)" },
-        },
-      },
-      animation: {
-        leftRight: `leftRight 3s ease-in-out infinite`,
-        upDown: `upDown 3s ease-in-out infinite`,
-        zoomInOut: `zoomInOut 5s ease-in-out infinite`,
       },
     },
   },

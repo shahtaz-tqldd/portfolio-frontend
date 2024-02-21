@@ -16,28 +16,20 @@ const Navbar = () => {
 
   const navItems = [
     {
-      icon: "https://cdn.lordicon.com/osuxyevn.json",
-      link: "#home",
-    },
-    {
       icon: "https://cdn.lordicon.com/bhfjfgqz.json",
       link: "#about",
     },
     {
       icon: "https://cdn.lordicon.com/ofwpzftr.json",
-      link: "#services",
-    },
-    {
-      icon: "https://cdn.lordicon.com/svbmmyue.json",
-      link: "#skills",
+      link: "#experience",
     },
     {
       icon: "https://cdn.lordicon.com/fpmskzsv.json",
       link: "#projects",
     },
     {
-      icon: "https://cdn.lordicon.com/diihvcfp.json",
-      link: "#contact",
+      icon: "https://cdn.lordicon.com/svbmmyue.json",
+      link: "#skills",
     },
   ];
 
@@ -53,75 +45,24 @@ const Navbar = () => {
   }
 
   return (
-    <section className="flex flex-col gap-4 sticky top-16">
-      {/* Homepage */}
-      {path !== "" && (
-        <div className="px-3 py-2 border-[1px] border-accent rounded-full">
-          <Link to="/" className="icon" data-title="Homepage">
-            <lord-icon
-              src="https://cdn.lordicon.com/osuxyevn.json"
-              trigger="hover"
-              class="current-color"
-              style={{ width: "24px", height: "24px", paddingTop: "2px" }}
-            ></lord-icon>
-          </Link>
-        </div>
-      )}
-
-      {/* Homepage contents */}
-      {path === "" && (
-        <div className="flex flex-col gap-5 py-6 px-3 border-[1px] border-accent rounded-full">
-          {navItems?.map(({ icon, link }, index) => (
-            <a
-              key={index}
-              href={link}
-              className="icon flex flex-col items-center"
-              data-title={link?.split("#")[1]}
-            >
-              <lord-icon
-                src={icon}
-                trigger="hover"
-                class="current-color"
-                style={{ width: "24px", height: "24px" }}
-              />
-              <span className="text-xs">{link?.split("#")[1]}</span>
-            </a>
-          ))}
-        </div>
-      )}
-
-      {/* Blogs */}
-      <div className="px-3 py-2 border-[1px] border-accent rounded-full">
-        <Link to="/blogs" className="icon" data-title="Blogs">
+    <div className="w-fit flex gap-10 py-4 px-10 rounded-full sticky top-3 border border-slate-500 bg-slate-700 bg-opacity-[0.98] relative z-[100]">
+      {navItems?.map(({ icon, link }, index) => (
+        <a
+          key={index}
+          href={link}
+          className="fl gap-2 group"
+        >
           <lord-icon
-            src="https://cdn.lordicon.com/vufjamqa.json"
+            src={icon}
             trigger="hover"
+            target="a"
             class="current-color"
-            style={{ width: "24px", height: "24px", paddingTop: "2px" }}
-          ></lord-icon>
-        </Link>
-      </div>
-
-      {/* Dashboard */}
-      {user && (
-        <div className="flex flex-col gap-3 py-6 px-3 border-[1px] border-accent rounded-full">
-          <Link to="/dashboard" className="icon" data-title="Dashboard">
-            <lord-icon
-              src="https://cdn.lordicon.com/ynwbvguu.json"
-              trigger="hover"
-              class="current-color"
-              style={{ width: "24px", height: "24px", paddingTop: "2px" }}
-            ></lord-icon>
-          </Link>
-          <div data-title="Logout">
-            <FiLogOut
-              onClick={handleLogout}
-              className="text-[24px] hover:text-error cursor-pointer"
-            />
-          </div>
-        </div>
-      )}
-    </section>
+            style={{ width: "24px", height: "24px" }}
+          />
+          <span className="group-hover:text-primary tr">{link?.charAt(1).toUpperCase()+link.slice(2)}</span>
+        </a>
+      ))}
+    </div>
   );
 };
 

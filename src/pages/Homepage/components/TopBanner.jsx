@@ -1,52 +1,38 @@
 import React from "react";
 import SectionTitle from "../../../ui/Heading/SectionTitle";
+import TicTacToe from "../Games/TicTacToe/TicTacToe";
+import Lordicon from "../../../utiles/Lordicon";
 
 const TopBanner = () => {
   return (
-    <section id="home" className="mb-32 mt-10">
-      <SectionTitle icon={"osuxyevn"} text={"Introduction"} />
-      <h1 className="lg:text-[65px] lg:leading-[75px] md:text-[50px] md:leading-[60px] text-[28px] leading-[40px]">
-        Hey! I'm <span className="text-primary">Shahtaz</span>,<br /> Full-Stack
-        Web Developer
-      </h1>
-      <p className="mt-6 lg:text-2xl md:text-2xl text-md">
-        I am a MERN Stack developer who loves to create dynamic and responsive
-        web applications.
-      </p>
-      <div className="flex lg:flex-row md:flex-row flex-col justify-between lg:items-end md:items-end items-center">
-        <div className="flex lg:gap-28 md:gap-24 gap-20 lg:mt-20 md:mt-20 mt-12">
-          <div>
-            <span className="text-primary lg:text-[70px] md:text-[60px] text-[50px] leading-[100px]">
-              2+
-            </span>
-            <p className="uppercase text-accent -mt-2">
-              Years of
-              <br /> experience
-            </p>
-          </div>
-          <div>
-            <span className="text-primary lg:text-[70px] md:text-[60px] text-[50px] leading-[100px]">
-              20+
-            </span>
-            <p className="uppercase text-accent -mt-2">
-              Projects
-              <br /> Completed
-            </p>
+    <section id="about" className="pt-12">
+      <div className="flex justify-between lg:flex-row md:flex-row flex-col gap-20">
+        <div className="max-w-[600px]">
+          Back in 2020 when I was in the final year of my undergraduation, I was
+          not sure if I am really going to pursue a career in Metallurgical
+          Engineering. So I started to explore options and started working on
+          websites.
+          <br />
+          <br />I started web programming out of self interest and found out I
+          enjoy designing and developing web application. It gives me the
+          enlightenment of creating something that I can own.
+          <div className="flex lg:gap-28 md:gap-24 gap-20 md:mt-12 mt-10">
+            <div>
+              <span className="text-primary lg:text-[60px] md:text-[50px] text-[40px] leading-[90px] font-bold">
+                02+
+              </span>
+              <p className="">Years of Experience</p>
+            </div>
+            <div>
+              <span className="text-primary lg:text-[60px] md:text-[50px] text-[40px] leading-[90px] font-bold">
+                30+
+              </span>
+              <p className="">Projects Completed</p>
+            </div>
           </div>
         </div>
-        <a
-          href="#projects"
-          className="flex hover:text-primary items-center gap-2 text-2xl icon cursor-pointer lg:mt-0 md:mt-0 mt-14 lg:mr-8"
-        >
-          My Projects
-          <lord-icon
-            target="div"
-            src="https://cdn.lordicon.com/rxufjlal.json"
-            trigger="hover"
-            class="current-color"
-            style={{ width: "40px", height: "40px" }}
-          ></lord-icon>
-        </a>
+
+        <TicTacToe />
       </div>
     </section>
   );

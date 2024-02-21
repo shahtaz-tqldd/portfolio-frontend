@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Manrope&family=Ubuntu:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,9 +6,19 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #272728;
+  font-family: "Inter", sans-serif;
+  background-color: rgb(15 23 42);
   color: #d2d2d2;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+.font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 .fl {
@@ -27,23 +37,26 @@ body {
 }
 
 
-.scrollbar-thin::-webkit-scrollbar {
-  display: block !important;
-  width: 5px !important;
-  height: 8px !important;
+.MuiInputLabel-root {
+  color: rgba(256, 256, 256, 0.4) !important;
 }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .custom-quill-editor {
   border-radius: 8px;
-  font-family: "Outfit", sans-serif;
-  color: #333;
-  border: 1px solid #ddd;
+  color: #ddd;
 }
 
 .custom-quill-editor .ql-editor {
   border-radius: 0 0 8px 8px;
-  font-size: 14px;
-  background-color: #fff;
+  font-size: 16px;
+  background-color: #334155;
   padding: 10px;
   min-height: 180px;
 }
@@ -55,7 +68,7 @@ body {
 .custom-quill-editor .ql-toolbar {
   border-radius: 8px 8px 0 0;
   border: none;
-  background-color: #e2e2e2;
+  background-color: #1f2937;
   display: flex;
   gap: 16px;
 }

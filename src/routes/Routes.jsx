@@ -6,16 +6,13 @@ import Products from "../pages/Products/Products";
 import Errorpage from "../components/Errorpage";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard/Dashboard";
-import ProductList from "../pages/Dashboard/Products/ProductList";
-import AddProduct from "../pages/Dashboard/Products/AddProduct";
-import UserList from "../pages/Dashboard/Users/UserList";
-import OrderList from "../pages/Dashboard/Orders/OrderList";
-import Analytics from "../pages/Dashboard/Analytics/Analytics";
-
-import CustomerSupport from "../pages/Dashboard/CustomerSupport/CustomerSupport";
-import Settings from "../pages/Dashboard/Settings/Settings";
-import BannerList from "../pages/Dashboard/Banner/BannerList";
-import SpecialOffer from "../pages/Dashboard/SpecialOffer/SpecialOffer";
+import ProjectDashboard from "../pages/Dashboard/Projects/ProjectDashboard";
+import SkillDashboard from "../pages/Dashboard/Skills/SkillDashboard";
+import BlogDashboard from "../pages/Dashboard/Blogs/BlogDashboard";
+import ExperienceDashboard from "../pages/Dashboard/Experience/ExperienceDashboard";
+import BasicInfoPage from "../pages/Dashboard/Settings/BasicInfoPage";
+import AddProject from "../pages/Dashboard/Projects/AddProject";
+import WriteBlog from "../pages/Dashboard/Blogs/WriteBlog";
 
 export const routes = createBrowserRouter([
   {
@@ -40,9 +37,9 @@ export const routes = createBrowserRouter([
   {
     path: "/dashboard",
     element: (
-      <PrivateRoute allowedRoles={["admin", "super admin"]} path={"/"}>
-        <DashboardLayout />
-      </PrivateRoute>
+      // <PrivateRoute allowedRoles={["admin", "super admin"]} path={"/"}>
+      <DashboardLayout />
+      // </PrivateRoute>
     ),
     children: [
       {
@@ -50,40 +47,32 @@ export const routes = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/dashboard/analytics",
-        element: <Analytics />,
+        path: "/dashboard/projects",
+        element: <ProjectDashboard />,
       },
       {
-        path: "/dashboard/products",
-        element: <ProductList />,
+        path: "/dashboard/project/new-project",
+        element: <AddProject />,
       },
       {
-        path: "/dashboard/products/add-product",
-        element: <AddProduct />,
+        path: "/dashboard/skills",
+        element: <SkillDashboard />,
       },
       {
-        path: "/dashboard/users",
-        element: <UserList />,
+        path: "/dashboard/blogs",
+        element: <BlogDashboard />,
       },
       {
-        path: "/dashboard/orders",
-        element: <OrderList />,
+        path: "/dashboard/blogs/write-blog",
+        element: <WriteBlog />,
       },
       {
-        path: "/dashboard/banner",
-        element: <BannerList />,
+        path: "/dashboard/work-experience",
+        element: <ExperienceDashboard />,
       },
       {
-        path: "/dashboard/special-offer",
-        element: <SpecialOffer />,
-      },
-      {
-        path: "/dashboard/settings",
-        element: <Settings />,
-      },
-      {
-        path: "/dashboard/customer-support",
-        element: <CustomerSupport />,
+        path: "/dashboard/basic-info",
+        element: <BasicInfoPage />,
       },
     ],
   },

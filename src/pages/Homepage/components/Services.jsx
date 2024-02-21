@@ -2,7 +2,6 @@ import React from "react";
 import { SiReact } from "react-icons/si";
 import { HiOutlineCode } from "react-icons/hi";
 import { FiCodesandbox } from "react-icons/fi";
-import SectionTitle from "../../../ui/Heading/SectionTitle";
 import SectionHead from "../../../ui/Heading/SectionHead";
 
 const Services = () => {
@@ -28,16 +27,17 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="mb-32">
-      <SectionTitle icon={"ofwpzftr"} text={"Services"} />
-      <SectionHead>
-        My <span className="text-primary">Specializations</span>
-      </SectionHead>
-      <div className="grid grid-cols-3 gap-5">
+    <section id="services" className="md:mt-0 mt-12">
+      <SectionHead
+        title={"Services"}
+        text={"My Expertise"}
+        icon={"hqymfzvj"}
+      />
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
         {services.map(({ service, details }, index) => (
           <div
             key={index}
-            className="hover:text-primary hover:border-primary border-[1px] border-accent p-6 rounded-2xl tr cursor-pointer"
+            className="hover:text-primary  bg-slate-800 p-6 rounded-2xl tr cursor-pointer"
             data-aos="fade-up"
             data-aos-delay={`${(index % 6) * 100 + 100}`}
           >
@@ -48,7 +48,7 @@ const Services = () => {
               <h2 className="lg:text-2xl md:text-2xl text-xl mt-3 lg:font-normal md:font-normal font-bold">
                 {service}
               </h2>
-              <p className="text-accent mt-3 text-sm">{details}</p>
+              <p className="mt-3 text-sm text-slate-400">{details}</p>
             </div>
           </div>
         ))}

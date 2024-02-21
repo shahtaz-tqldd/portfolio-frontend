@@ -1,6 +1,6 @@
 import { useState } from "react";
-import placeholder from "../../assets/images/placeholder.png";
-import { HiXMark } from "react-icons/hi2";
+// import placeholder from "../../assets/images/placeholder.png";
+const placeholder = "https://cdn-icons-png.flaticon.com/128/4904/4904233.png"
 
 const LogoImage = ({
   setSelectedFile,
@@ -30,7 +30,7 @@ const LogoImage = ({
         <label
           htmlFor={id}
           id="image-preview"
-          className="bg-[#F7F7F7] rounded-xl w-full h-[240px] border-gray-400 items-center mx-auto text-center cursor-pointer justify-center flex"
+          className="bg-slate-800 rounded-xl w-full h-[240px] border-gray-400 items-center mx-auto text-center cursor-pointer justify-center flex"
         >
           <input
             id={id}
@@ -48,9 +48,9 @@ const LogoImage = ({
               alt="Upload image"
               className="h-[100px] w-[300px] object-contain mb-2"
             />
-            <h2 className="text-md font-bold text-[#434343]">Upload Logo</h2>
+            <h2 className="text-md font-bold text-slate-300">Upload Image</h2>
 
-            <div className="text-gray-600 flex flex-col justify-center items-center text-xs mt-2">
+            <div className="text-gray-400 flex flex-col justify-center items-center text-xs mt-2">
               <p>
                 Allowed formats <strong>png, jpg, jpeg, webp</strong>{" "}
               </p>

@@ -23,12 +23,12 @@ const ModernTable = ({
     <TableContainer
       sx={{
         boxShadow: "none",
-        border: "1px solid #e4e4e4",
+        border: "1px solid #475569",
         borderRadius: "12px",
       }}
       component={Paper}>
       <Table aria-label="collapsible table">
-        <TableHead sx={{ backgroundColor: "#F6F7F8" }}>
+        <TableHead sx={{ backgroundColor: "#1f2937" }}>
           <TableRow>
             {columns?.map((cell, index) => (
               <TableCell
@@ -41,7 +41,7 @@ const ModernTable = ({
                         Boolean(data?.collasped)
                       ? "right"
                       : "center",
-                  color: "#655E5E",
+                  color: "#94a3b8",
                   fontSize: "14px",
                   fontWeight: 600,
                 }}>

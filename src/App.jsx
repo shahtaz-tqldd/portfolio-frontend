@@ -7,11 +7,18 @@ import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Loader from "./ui/Loader/Loader";
 import "react-quill/dist/quill.snow.css";
-import './assets/styles/style.css'
-import './assets/styles/responsive.css'
+import "./assets/styles/style.css";
+import "./assets/styles/responsive.css";
 
 function App() {
   const theme = createTheme({
+    palette: {
+      primary: { main: "#03C988" },
+      text: {
+        primary: "#ddd", // Set the primary text color to white
+      },
+    },
+
     typography: {
       fontFamily: `"Figtree", sans-serif`,
     },

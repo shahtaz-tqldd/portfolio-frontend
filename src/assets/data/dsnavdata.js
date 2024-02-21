@@ -1,84 +1,39 @@
-import { MdAutoGraph } from "react-icons/md";
-import { FiSettings, FiUsers } from "react-icons/fi";
-
-import { TbBrandBackbone, TbBrandFirebase, TbBrandAppgallery } from "react-icons/tb";
-
-import { IoCartOutline } from "react-icons/io5";
-import { RxDashboard } from "react-icons/rx";
-import { LuBox } from "react-icons/lu";
-import { RiCustomerServiceLine } from "react-icons/ri";
-import { GrCodeSandbox } from "react-icons/gr";
+import { MdOutlineCategory, MdOutlineDashboardCustomize } from "react-icons/md";
+import { TbBrandTrello } from "react-icons/tb";
+import { RiFileInfoLine } from "react-icons/ri";
+import { FaRegFolderClosed } from "react-icons/fa6";
+import { CgFileDocument } from "react-icons/cg";
 
 export const dsnavdata = [
   {
-    stackName: "Overview",
-    data: [
-      {
-        title: "Dashboard",
-        link: "/dashboard",
-        icon: RxDashboard,
-      },
-      // {
-      //   title: "Analytics",
-      //   link: "/dashboard/analytics",
-      //   icon: MdAutoGraph,
-      // },
-    ],
+    title: "Dashboard",
+    link: "/dashboard",
+    icon: MdOutlineDashboardCustomize,
   },
   {
-    stackName: "Management",
-    data: [
-      {
-        title: "Users",
-        link: "/dashboard/users",
-        icon: FiUsers,
-      },
-      {
-        title: "Orders",
-        link: "/dashboard/orders",
-        icon: IoCartOutline,
-      },
-
-      {
-        title: "Products",
-        link: "/dashboard/products",
-        icon: LuBox,
-      },
-
-      {
-        title: "Featured",
-        link: "/banners",
-        icon: GrCodeSandbox,
-        children: [
-          {
-            title: "Hero Banner",
-            link: "/dashboard/banner",
-            icon: TbBrandBackbone,
-          },
-          {
-            title: "Special Offer",
-            link: "/dashboard/special-offer",
-            icon: TbBrandFirebase,
-          },
-          ,
-        ],
-      },
-    ],
+    title: "Projects",
+    link: "/dashboard/projects",
+    icon: FaRegFolderClosed,
+  },
+  {
+    title: "Skills",
+    link: "/dashboard/skills",
+    icon: MdOutlineCategory,
   },
 
   {
-    stackName: "Support",
-    data: [
-      {
-        title: "Customer Support",
-        link: "/dashboard/customer-support",
-        icon: RiCustomerServiceLine,
-      },
-      {
-        title: "Settings",
-        link: "/dashboard/settings",
-        icon: FiSettings,
-      },
-    ],
+    title: "Blogs",
+    link: "/dashboard/blogs",
+    icon: CgFileDocument,
+  },
+  {
+    title: "Work Experience",
+    link: "/dashboard/work-experience",
+    icon: TbBrandTrello,
+  },
+  {
+    title: "Basic Info",
+    link: "/dashboard/basic-info",
+    icon: RiFileInfoLine,
   },
 ];

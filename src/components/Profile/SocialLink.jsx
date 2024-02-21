@@ -1,41 +1,44 @@
 import React from "react";
 import { GrFacebookOption, GrGithub, GrLinkedinOption } from "react-icons/gr";
 import { FaWhatsapp } from "react-icons/fa";
+import Lordicon from "../../utiles/Lordicon";
 const SocialLinks = () => {
   return (
-    <div className="flex gap-5 text-white text-xl">
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://github.com/shahtaz-tqldd/"
-        className="border-[1px] border-white p-[12px] rounded-full hover:border-primary hover:text-primary transition duration-300"
-      >
-        <GrGithub />
-      </a>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://www.linkedin.com/in/shahtazrahman/"
-        className="border-[1px] border-white p-[12px] rounded-full hover:border-primary hover:text-primary transition duration-300"
-      >
-        <GrLinkedinOption />
-      </a>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://www.facebook.com/shahtaz.rahman.3/"
-        className="border-[1px] border-white p-[12px] rounded-full hover:border-primary hover:text-primary transition duration-300"
-      >
-        <GrFacebookOption />
-      </a>
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://wa.me/8801521305382/"
-        className="border-[1px] border-white p-[12px] rounded-full hover:border-primary hover:text-primary transition duration-300"
-      >
-        <FaWhatsapp />
-      </a>
+    <div className=" fleb">
+      <div className="flex gap-8 text-xl">
+        {[
+          {
+            link: "https://github.com/shahtaz-tqldd/",
+            icon: GrGithub,
+          },
+          {
+            link: "https://www.linkedin.com/in/shahtazrahman/",
+            icon: GrLinkedinOption,
+          },
+          {
+            link: "https://www.facebook.com/shahtaz.rahman.3/",
+            icon: GrFacebookOption,
+          },
+          {
+            link: "https://wa.me/8801521305382/",
+            icon: FaWhatsapp,
+          },
+        ].map((social, index) => (
+          <a
+            key={index}
+            target="_blank"
+            rel="noreferrer"
+            href={social.link}
+            className="hover:text-primary tr"
+          >
+            <social.icon />
+          </a>
+        ))}
+      </div>
+      <button className="text-sm fl gap-2 font-bold text-primary hover:text-white tr">
+        <Lordicon link={"bkjyrmiv"} target={"button"} />
+        Get in touch
+      </button>
     </div>
   );
 };

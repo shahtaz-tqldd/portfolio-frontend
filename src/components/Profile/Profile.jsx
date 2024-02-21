@@ -1,43 +1,52 @@
 import React from "react";
 import profile from "../../assets/images/shahtaz.jpg";
 import SocialLinks from "./SocialLink";
+import { homenavitems } from "../../assets/data/navdata";
+import Lordicon from "../../utiles/Lordicon";
 
 const Profile = () => {
   return (
-    <div className="lg:w-[380px] border-[1px] border-[#bbb] rounded-3xl px-6 py-10">
-      <div className="flex justify-between mb-6">
-        <h2 className="text-4xl font-semibold text-primary">Shahtaz</h2>
-        <h2 className="text-white leading-[20px]">
-          Full-Stack
-          <br />
-          Web Developer
-        </h2>
+    <div className="lg:w-[380px]">
+      <div className="h-48 w-48 relative">
+        <img
+          src={profile}
+          alt=""
+          className="h-full w-full object-cover rounded-2xl relative z-10"
+        />
+        <div className="bg-primary h-48 w-48 absolute top-1 left-1 rounded-2xl"></div>
       </div>
-      <img
-        src={profile}
-        alt=""
-        className="h-[250px] w-[250px] object-cover rounded-3xl mx-auto"
-      />
-      <div className="flex flex-col items-center">
-        <h2 className="text-white text-lg text-white mt-8">
-          shahtaz67@gmail.com
-        </h2>
-        <h2 className="text-white text-sm text-gray-200 mt-2 mb-6">
-          Dhaka, Bangladesh
-        </h2>
-
-        {/* SOCIAL MEDIA ICONS */}
-        <SocialLinks />
+      <div className="mt-8">
+        <h2 className="text-4xl font-semibold font-ubuntu">Shahtaz Rahman</h2>
+        <h2 className="text-xl mt-1.5 opacity-80">Full-Stack Web Developer</h2>
+        <p className="text-start mt-5 opacity-80">
+          I am a MERN Stack developer who loves to create dynamic and responsive
+          web applications.
+        </p>
+      </div>
+      <div className="group cursor-pointer mt-6 w-fit">
         <a
-          href="https://drive.google.com/file/d/1lV9dIwZU1Ede97Fao-GY1s3EjLPyjvO-/view?usp=share_link"
-          className="w-full"
           target="_blank"
           rel="noreferrer"
+          href="https://drive.google.com/file/d/1lV9dIwZU1Ede97Fao-GY1s3EjLPyjvO-/view?usp=share_link"
+          className="font-bold text-primary group-hover:text-white fl gap-2 tr"
         >
-          <button className="bg-primary hover:bg-sec text-[#222] font-semibold py-3 w-full rounded-lg mt-8 tr">
-            Get my Resume
-          </button>
+          Get my resume
         </a>
+        <div className="border-b-2 border-gray-200 w-10 group-hover:w-20 tr mt-1.5 group-hover:border-primary"></div>
+      </div>
+
+      <div className="fl gap-5 mt-10 mb-16 md:flex hidden">
+        {homenavitems?.map(({ icon, link }, index) => (
+          <a key={index} href={link} className="fl gap-2 group">
+            {/* <Lordicon link={icon} /> */}
+            <span className="group-hover:text-primary tr">
+              {link?.charAt(1).toUpperCase() + link.slice(2)}
+            </span>
+          </a>
+        ))}
+      </div>
+      <div className="md:mt-0 mt-12">
+        <SocialLinks />
       </div>
     </div>
   );

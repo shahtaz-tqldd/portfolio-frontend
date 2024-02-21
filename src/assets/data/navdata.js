@@ -1,23 +1,22 @@
-import { RiHome5Fill } from 'react-icons/ri'
-import { PiShoppingCartSimpleFill, PiAddressBookFill } from 'react-icons/pi'
-import { MdCall } from 'react-icons/md'
-export const navdata = [
+export const homenavitems = [
   {
-    id: 2,
-    title: "Products",
-    link: "/products",
-    icon:PiShoppingCartSimpleFill
+    icon: "bhfjfgqz",
+    link: "#about",
   },
   {
-    id: 3,
-    title: "Contact",
-    link: "/contact",
-    icon:MdCall
+    icon: "ofwpzftr",
+    link: "#experience",
   },
   {
-    id: 4,
-    title: "About",
-    link: "/about",
-    icon:PiAddressBookFill
+    icon: "fpmskzsv",
+    link: "#projects",
+  },
+  {
+    icon: "svbmmyue",
+    link: "#skills",
+  },
+  {
+    icon: "svbmmyue",
+    link: "#blogs",
   },
 ];

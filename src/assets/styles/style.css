@@ -8,6 +8,15 @@
   transition: 0.3s;
 }
 
+.primary-color {
+  color: #03c988;
+}
+
+.icon:hover .primary-color {
+  color: #fff;
+  transition: 0.3s;
+}
+
 /* TITLE */
 
 [data-title]:hover:after {

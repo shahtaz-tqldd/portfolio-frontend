@@ -47,7 +47,8 @@ const CreateTableRow = ({ item, columns, menuData, setAction, threeDot }) => {
           <TableCell
             key={index}
             sx={{
-              color: "#655E5E",
+              color: "#cbd5e1",
+              backgroundColor:"#1e293b",
               textAlign:
                 index === 0
                   ? "left"
@@ -69,13 +70,14 @@ const CreateTableRow = ({ item, columns, menuData, setAction, threeDot }) => {
         ))}
         {threeDot === false ? null : (
           <TableCell
-            sx={
-              item?.collasped ? { textAlign: "right" } : { textAlign: "center" }
+            sx={ 
+              item?.collasped ? { textAlign: "right",backgroundColor:"#1e293b" } : { textAlign: "center", backgroundColor:"#1e293b" }
             }>
             {item?.collasped && (
               <IconButton
                 aria-label="expand row"
                 size="small"
+                sx={{color:"#cbd5e1"}}
                 onClick={() => setOpen(!open)}>
                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
               </IconButton>
@@ -84,7 +86,7 @@ const CreateTableRow = ({ item, columns, menuData, setAction, threeDot }) => {
               id="basic-menu"
               aria-controls={Boolean(openThreeDot) ? "basic-menu" : undefined}
               aria-haspopup="true"
-              sx={{ marginInlineStart: 3 }}
+              sx={{ marginInlineStart: 3, color:"#cbd5e1" }}
               aria-expanded={Boolean(openThreeDot) ? "true" : undefined}
               onClick={handleThreeDotClick}
               aria-label="delete"
@@ -97,7 +99,7 @@ const CreateTableRow = ({ item, columns, menuData, setAction, threeDot }) => {
       {item?.collasped && (
         <TableRow>
           <TableCell
-            style={{ paddingBottom: 0, paddingTop: 0, background: "#F4F6F8" }}
+            style={{ paddingBottom: 0, paddingTop: 0, background: "#1e293b" }}
             colSpan={columns.length + 1}>
             <Collapse
               in={open}
